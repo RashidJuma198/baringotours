@@ -1,0 +1,35 @@
+/* General Form Styles */
+.form-control,
+.form-select {
+    background-color: #f0f0f0 !important;
+    color: #333 !important;
+}
+
+.form-control::placeholder,
+.form-select option {
+    color: #888;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+
+.btn-outline-light {
+    color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-outline-light:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .form-floating {
+        margin-bottom: 1rem;
+    }
+}
