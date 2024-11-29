@@ -553,6 +553,7 @@
 
 
     <!-- Booking Start -->
+    <!-- Booking Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="booking p-5">
@@ -560,117 +561,145 @@
                     <div class="col-md-6 text-white">
                         <h6 class="text-white text-uppercase">Booking</h6>
                         <h1 class="text-white mb-4">Online Booking</h1>
-                        <p class="mb-4">Welcome.</p>
-                        <p class="mb-4">Fill in your details using our online booking. Our team will get back to you on time.</p>
-                        <a class="btn btn-outline-light py-3 px-5 mt-2" href="booking.html">WhatsApp +254757644188</a>
+                        <p class="mb-4">Fill in your details using our online booking form. Our team will get back to you on time.</p>
+                        <p class="mb-4">
+                            <a href="Terms and Conditions.html" class="nav-item nav-link">Booking Terms</a>
+                        </p>
                     </div>
                     <div class="col-md-6">
-                        <h1 class="text-white mb-4">Book A Tour</h1>
-                        <form>
+                        <h1 class="mb-4 text-primary">Book A Tour</h1>
+                        <form action="https://api.web3forms.com/submit" method="POST">
                             <div class="row g-3">
+                                <!-- Name Input -->
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control bg-transparent" id="name" placeholder="Your Name">
+                                        <input type="text" class="form-control" required name="name" id="name" placeholder="Your Name">
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
+                                <!-- Email Input -->
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control bg-transparent" id="email" placeholder="Your Email">
+                                        <input type="email" class="form-control" required name="email" id="email" placeholder="Your Email">
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
+                                <!-- Phone Input -->
                                 <div class="col-md-6">
-                                    <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
+                                    <div class="form-floating">
+                                        <input type="tel" class="form-control" required name="phone" id="phone" placeholder="Your Phone">
+                                        <label for="phone">Your Phone</label>
+                                    </div>
+                                </div>
+                                <!-- Date & Time Input -->
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control datetimepicker-input" id="datetime" placeholder="Date & Time" required name="datetime">
                                         <label for="datetime">Date & Time</label>
                                     </div>
                                 </div>
+                                <!-- Destination Selection -->
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <select class="form-select bg-transparent" id="select1">
-                                            <option value="1">Masai Mara</option>
-                                            <option value="2">Mombassa</option>
-                                            <option value="3">Nairobi</option>
-                                            <option value="3">Lake Nakuru</option>
-                                            <option value="3">Amboseli</option>
-                                            <option value="3">Lake Naivasha</option>
-                                            <option value="3">Tsavo East and West</option>
-                                            <option value="3">Lake Baringo</option>
-                                            <option value="3">Samburu</option>
-                                            <option value="3">Mount Kenya</option>
-                                            <option value="3">Kakamega Forest</option>
-                                            <option value="3">Lake Elementaita</option>
+                                        <select class="form-select" required id="destination" name="Destination">
+                                            <option value="">Select Destination</option>
+                                             <option value="Lake Baringo">Lake Baringo</option>
+                                            <option value="Masai Mara">Masai Mara</option>
+                                             <option value="Tsavo">Tsavo</option>
+                                             <option value="Samburu">Samburu</option>
+                                            <option value="Mombasa">Mombasa/Diani</option>
+                                            <option value="Nairobi">Nairobi</option>
+                                             <option value="Lake Elementaita">Lake Elementaita</option>
+                                            <option value="Lake Nakuru">Lake Nakuru</option>
+                                            <option value="Amboseli">Amboseli</option>
                                         </select>
-                                        <label for="select1">Destination</label>
+                                        <label for="destination">Destination</label>
                                     </div>
                                 </div>
+                                <!-- Duration Selection -->
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <select class="form-select bg-transparent" id="select1">
-                                            <option value="1">1 day</option>
-                                            <option value="2">2 days</option>
-                                            <option value="3">3 days</option>
-                                            <option value="4">4 days</option>
-                                            <option value="5">5 days</option>
-                                            <option value="6">6 days</option>
-                                            <option value="7">7 days</option>
-                                            <option value="8">8 days</option>
-                                            <option value="9">9 days</option>
-                                            <option value="10">10 days</option>
-                                            <option value="11">11 days</option>
-                                            <option value="12">12 days</option>
-                                            <option value="13">13 days</option>
-                                            <option value="14">14 days</option>
-                                            <option value="15">15 days</option>
+                                        <select class="form-select" required id="duration" name="Duration">
+                                            <option value="">Duration in Days</option>
+                                            <option value="1 day">1 Day</option>
+                                            <option value="2 days">2 Days</option>
+                                            <option value="3 days">3 Days </option>
+                                             <option value="4 days">4 Days </option>
+                                             <option value="5 days">5 Days </option>
+                                             <option value="6 days">6 Days </option>
+                                             <option value="7 days">7 Days </option>
+                                            <option value="8 days">8 Days</option>
                                         </select>
-                                        <label for="select1">Duration in Days</label>
+                                        <label for="duration">Duration</label>
                                     </div>
                                 </div>
+                                  <!-- Duration Selection -->
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <select class="form-select bg-transparent" id="select1">
+                                        <select class="form-select" required id="duration" name="Duration">
+                                            <option value="">Nights</option>
+                                            <option value="1 Nights">1 Night</option>
+                                            <option value="2 Nights">2 Nights</option>
+                                            <option value="3 Nights">3 Nights </option>
+                                             <option value="4 Nights">4 Nights </option>
+                                             <option value="5 Nights">5 Nights </option>
+                                            <option value="6 Nights">6 Nights</option>
+                                        </select>
+                                        <label for="duration">Duration</label>
+                                    </div>
+                                </div>
+                                <!-- Adults Selection -->
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select" required id="adults" name="Adults">
+                                            <option value="">Select Adults</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                             <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">Other</option>
+                                             <option value="5">5</option>
+                                             <option value="6">6</option>
+                                             <option value="7">7</option>
+                                             <option value="8">8</option>
                                         </select>
-                                        <label for="select1">Adults</label>
+                                        <label for="adults">Adults</label>
                                     </div>
                                 </div>
+                                <!-- Children Selection -->
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <select class="form-select bg-transparent" id="select1">
+                                        <select class="form-select" id="children" name="Children">
+                                            <option value="None">None</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
-                                            <option value="3">3</option>
+                                             <option value="3">3</option>
                                             <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">Other</option>
+                                             <option value="5">5</option>
+                                             <option value="6">6</option>
+                                             <option value="7">7</option>
                                         </select>
-                                        <label for="select1">Children</label>
+                                        <label for="children">Children</label>
                                     </div>
                                 </div>
+                                 <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Your Budget" id="message" required name="message" style="height: 100px"></textarea>
+                                        <label for="message">Your Budget</label>
+                                    </div>
+                                </div>
+                                <!-- Special Request Textarea -->
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control bg-transparent" placeholder="Special Request" id="message" style="height: 100px"></textarea>
+                                        <textarea class="form-control" placeholder="Special Request" id="message" required name="message" style="height: 100px"></textarea>
                                         <label for="message">Special Request</label>
                                     </div>
                                 </div>
+                                <!-- Submit Button -->
                                 <div class="col-12">
-                                    <button class="btn btn-outline-light w-100 py-3" type="submit">Book Now</button>
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
                                 </div>
                             </div>
+                            <input type="hidden" name="access_key" value="e68da8be-06d6-432f-ab88-8207c0521f23">
                         </form>
                     </div>
                 </div>
